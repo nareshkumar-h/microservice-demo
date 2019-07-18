@@ -1,0 +1,20 @@
+zuul:
+  routes:    
+    account-service:
+      path: /account/**
+      #url: http://localhost:9002/
+      service-id: account-service
+    user-service:
+      path: /user/**
+      #url: http://localhost:9001/
+      service-id: user-service
+    transaction-service:
+      path: /transaction/**
+      #url: http://localhost:9003/
+      service-id: transaction-service
+      
+      
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
